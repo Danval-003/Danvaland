@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { backgroundPage } from './Presentation.module.css'
+import { backgroundPage, intro2 } from './Presentation.module.css'
 
 const Presentation = () => {
   const [textoPricipal, setTextoPrincipal] = useState('')
@@ -8,8 +8,8 @@ const Presentation = () => {
   const disorderInterval = useRef(null)
   const listText = [
     'Who am I?',
-    'Where am I heading?',
-    'What do I want to achieve?',
+    'What skills do I possess?',
+    'What have I already done?',
     'Welcome to...',
     'Danvaland',
   ]
@@ -40,7 +40,12 @@ const Presentation = () => {
   })
 
   return (
-    <div className={backgroundPage} style={{ backgroundColor: `${color}` }}>
+    <div
+      className={`${backgroundPage} ${
+        color === 'rgb(141, 11, 33)' ? intro2 : null
+      }`}
+      style={{ backgroundColor: `${color}` }}
+    >
       <h1>{textoPricipal}</h1>
     </div>
   )

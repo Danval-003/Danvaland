@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+.skillsContainer{
+    display: block;
+    width: 100%;
+    height: 100vw;
+    background-color: rgb(0, 39, 3);
+    position: absolute;
+    top: 115vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 50% 50% 0% 0% / 20% 20% 0% 0%;
+    box-shadow: inset 0 0 1vw rgba(0, 0, 0, 0.67);
+}
+
+
+.gameBoyContainer{
+  height: fit-content;
+  position: relative;
+  top: -20vw;
+  animation: shaky 10s linear infinite;
+}
+
+.gameBoyContainer img{
+  height: 55vw;
+  filter: drop-shadow( 0.1vw 0.1vw 0.4vw rgba(255, 255, 255, 0.7));
+
+}
+
+.gameBoyContainer::before{
+  content: '';
+  display: block;
+  background: linear-gradient(-90deg, rgb(1, 220, 1) 5%, rgb(74, 254, 74) 50%, rgb(22, 246, 22) 70%, rgb(1, 220, 1) 80%);
+  height: 26.9vw;
+  width: 39.9vw;
+  position: absolute;
+  top: 11.5vw;
+  left: 26.8vw;
+  z-index: 4;
+  box-shadow: inset 0 0 1vw rgb(51, 51, 51);
+  filter: drop-shadow(0 0 1vw rgba(43, 255, 28, 0.555));
+  animation: tvScreen 4s linear infinite;
+}
+
+@keyframes tvScreen {
+  0% {  background-position-x: 0vw; opacity: 0.9; filter: brightness(1);}
+  33% { background-position-x: 13.3vw; opacity: 1; filter: brightness( 1.3);}
+  66% { background-position-x: 26.6vw; opacity: 1; filter: brightness( 1.25);}
+  100% {  background-position-x: 39.9vw; opacity: 0.9; filter: brightness( 1);}
+}
+
+.textContainer{
+  display: block;
+  width: 26.5vw;
+  height: 13.7vw;
+  text-align: left;
+  font-size: 0.9vw;
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  top: 11.8vw;
+  left: 29.7vw;
+  color: rgb(0, 51, 2);
+  z-index: 7;
+  text-shadow: 0 0 1vw rgba(17, 255, 104, 0.968);
+}
+
+.textContainer h3{
+  margin-bottom: 0.6vw;
+}
+
+.textContainer p{
+  margin-top: -0.1vw;
+}
+
+.textContainer h3{
+  font-size: 1.5vw;
+}
+
+
+.skills{
+    position: relative;
+    height: 80%;
+    width: 95%;
+    align-self: center;
+    border-radius: 0.5vw;
+    margin-top: 5vw;
+    box-shadow: 0.2vw 0.2vw black;
+}
+
+.skills p{
+    text-align: left;
+    margin-left: 10%;
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    white-space: nowrap;
+    position: absolute;
+    left: -5vw;
+
+    font-size: 3vw;
+    font-family: "Courier New";
+    text-shadow: 0.2vw 0.2vw 0.2vw rgb(0, 0, 0);
+    border-right: 0.5vw solid #ffffff;
+    animation: typing 4s steps(12) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80vw;
+    }
+  }
+@keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes shaky {
+    0% { transform: translate(0.2vw, 0); }
+    25% { transform: translate(-0.5vw, -0.2vw); }
+    50% { transform: translate(-0.2vw, 0); }
+    75% { transform: translate(0.5vw, 0.2vw); }
+    100% { transform: translate(0.3vw, 0); }
+  }
+
+.proyectContainer{
+  display: block;
+  position: absolute;
+  top: 46vw;
+  height: 100vw;
+  width: 100%;
+  background-color: rgb(0, 39, 3);
+}
+
+.proyectContainer::before{
+  content: "My proyects";
+  font-size: 8vw;
+  font-family: 'Cabin Sketch', cursive;
+  position: relative;
+  top: -9vw;
+  left: 0vw;
+  font-weight: 900;
+  filter: drop-shadow( 0.7vw 0.7vw 0.3vw rgb(0, 0, 0));
+}
+
+.BlineContainer, .starwarsContainer{
+  display: flex;
+  position: relative;
+  gap: 5vw;
+  margin-top: -5vw;
+}
+
+.starwarsContainer{
+  margin-bottom: 13vw;
+}
+
+.starwarsContainer img{
+  margin-left: 2vw;
+  margin-right: 9vw;
+  margin-top: 10.5vw;
+  height: 20vw;
+  animation: shaky 2s linear infinite;
+  filter: drop-shadow( 1.4vw 0.7vw 0.3vw rgb(0, 0, 0));
+}
+
+.BlineContainer img{
+  margin-left: 7vw;
+  height: 27vw;
+  animation: shaky 2s linear infinite;
+  filter: drop-shadow( 1.4vw 0.7vw 0.3vw rgb(0, 0, 0));
+}
+
+.BlineContainer a, .starwarsContainer a{
+  font-size: 7vw;
+  position: relative;
+  
+  top: 10vw;
+  color: white;
+  outline: none;
+  height: fit-content;
+  width: fit-content;
+  text-shadow: 0 0 5vw rgb(0, 0, 0);
+  margin-left: 5vw;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.BlineContainer a:hover, .starwarsContainer a:hover{
+  outline: none;
+  color: rgb(174, 174, 174);
+}

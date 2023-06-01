@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Presentation, Header } from '@components'
+import { Presentation, Header, House, Skills } from '@components'
 import {
   backgroundPage,
   transitionFirstPage,
@@ -14,7 +14,7 @@ const StartPage = () => {
 
   useEffect(() => {
     timer.current = setTimeout(() => setIntro(false), 16000)
-    timer2.current = setTimeout(() => setIntro2(true), 15500)
+    timer2.current = setTimeout(() => setIntro2(true), 14000)
     return () => clearTimeout(timer.current)
   }, [])
 
@@ -23,9 +23,13 @@ const StartPage = () => {
       <div className={`${intro2 ? transitionFirstPage : ''}`}>
         {intro ? <Presentation /> : null}
       </div>
-      <div className={backgroundPageContainer}>
-        <Header />
-      </div>
+      {intro2 ? (
+        <div className={backgroundPageContainer}>
+          <Header />
+          <House />
+          <Skills />
+        </div>
+      ) : null}
     </div>
   )
 }

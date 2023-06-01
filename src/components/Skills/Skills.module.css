@@ -137,7 +137,7 @@
 }
 
 .proyectContainer::before{
-  content: "My proyects";
+  content: "My projects";
   font-size: 8vw;
   font-family: 'Cabin Sketch', cursive;
   position: relative;

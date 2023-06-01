@@ -30,12 +30,12 @@ const Skills = () => (
       <div className={BlineContainer}>
         <img src={Bline} alt='Bline' />
         <a href='https://github.com/Dahernandezsilve/Project_B-Line'>
-          Bline Proyect
+          Bline Project
         </a>
       </div>
       <div className={starwarsContainer}>
         <a href='https://github.com/Danval-003/StarWarsProyect'>
-          Star Wars Proyect
+          Star Wars Project
         </a>
         <img src={Starwars} alt='Bline' />
       </div>

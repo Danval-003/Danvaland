@@ -14,7 +14,7 @@ const Skills = () => (
     <div className={gameBoyContainer}>
       <img src={gameBoy} alt='GameBoy' />
       <div className={textContainer}>
-        <h3> SKILLS</h3>
+        <h3> MY SKILLS</h3>
         <p>&nbsp;-&gt; Javascript | LEVEL 60/100</p>
         <p>&nbsp;-&gt; React | LEVEL 50/100</p>
         <p>&nbsp;-&gt; Python | LEVEL 70/100</p>

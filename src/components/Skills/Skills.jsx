@@ -1,5 +1,5 @@
 import React from 'react'
-import { gameBoy, Bline, Starwars } from '@assets'
+import { gameBoy, Bline, Starwars, ALFAbetizate, maze, github } from '@assets'
 import {
   skillsContainer,
   gameBoyContainer,
@@ -40,9 +40,19 @@ const Skills = () => (
         <img src={Starwars} alt='Bline' />
       </div>
       <div className={BlineContainer}>
-        <img src={Bline} alt='Bline' />
-        <a href='https://github.com/Dahernandezsilve/Project_B-Line'>
-          Bline Proyect
+        <img src={ALFAbetizate} alt='Bline' />
+        <a href='https://github.com/Danval-003/ALFAbetizate/'>ALFAbetizate</a>
+      </div>
+      <div className={starwarsContainer}>
+        <a href='https://stellar-sundae-246d9f.netlify.app/'>
+          The uvg super maze
+        </a>
+        <img src={maze} alt='The Maze' />
+      </div>
+      <div className={BlineContainer}>
+        <img src={github} alt='Bline' />
+        <a href='https://github.com/Danval-003'>
+          See more in my GitHub profile.
         </a>
       </div>
     </div>

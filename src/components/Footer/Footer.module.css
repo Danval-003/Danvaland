@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.footerContainer{
+    display: block;
+    height: 25vw;
+    background-color: rgb(97, 47, 10);
+    position: relative;
+    top: 298vw;
+    filter: drop-shadow( 0.7vw 0.7vw 1vw rgb(0, 0, 0));
+    box-shadow: inset 0 0 0.5vw black;
+}
+
+
+.texted{
+    display: block;
+    text-align: left;
+    font-size: 3vw;
+    margin-left: 2vw;
+    font-family: 'Roboto Slab', serif;
+
+}
+

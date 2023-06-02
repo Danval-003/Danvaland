@@ -15,15 +15,16 @@ const Skills = () => (
       <img src={gameBoy} alt='GameBoy' />
       <div className={textContainer}>
         <h3> MY SKILLS</h3>
-        <p>&nbsp;-&gt; Javascript | LEVEL 60/100</p>
-        <p>&nbsp;-&gt; React | LEVEL 50/100</p>
-        <p>&nbsp;-&gt; Python | LEVEL 70/100</p>
-        <p>&nbsp;-&gt; C++ | LEVEL 50/100</p>
-        <p>&nbsp;-&gt; Java | LEVEL 70/100</p>
-        <p>&nbsp;-&gt; Kotlin | LEVEL 60/100</p>
-        <p>&nbsp;-&gt; Android | LEVEL 40/100</p>
-        <p>&nbsp;-&gt; PostgreSQL | LEVEL 80/100</p>
-        <p>&nbsp;-&gt; Ubuntu | LEVEL 30/100</p>
+        <p>&nbsp;-&gt; Javascript - LEVEL 60/100</p>
+        <p>&nbsp;-&gt; React - LEVEL 50/100</p>
+        <p>&nbsp;-&gt; Python - LEVEL 70/100</p>
+        <p>&nbsp;-&gt; C++ - LEVEL 50/100</p>
+        <p>&nbsp;-&gt; Java - LEVEL 70/100</p>
+        <p>&nbsp;-&gt; Kotlin - LEVEL 60/100</p>
+        <p>&nbsp;-&gt; Android - LEVEL 40/100</p>
+        <p>&nbsp;-&gt; PostgreSQL - LEVEL 80/100</p>
+        <p>&nbsp;-&gt; Ubuntu - LEVEL 30/100</p>
+        <p>&nbsp;-&gt; CSS - LEVEL 60/100</p>
       </div>
     </div>
     <div className={proyectContainer}>

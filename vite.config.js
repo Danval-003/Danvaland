@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-import vitePluginCssModules from 'vite-plugin-css-modules'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), vitePluginCssModules.default()],
+  plugins: [react()],
   server: {
     host: '0.0.0.0',
     port: '3000',

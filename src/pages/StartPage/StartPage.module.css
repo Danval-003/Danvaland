@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'doodle';
+    src: url('./fonts/doodlepen_limited-webfont.woff2') format('woff2'),
+         url('./fonts/doodlepen_limited-webfont.woff') format('woff'); 
+  }
+
 .backgroundPage{
     width: 100%;
     height: 100%;
@@ -13,6 +19,9 @@
     align-items: center;
     justify-content: start;
     z-index: -1;
+    
+    background-color: rgb(44, 0, 146);
+    font-family: 'doodle', sans-serif;
 }
 
 .backgroundPageContainer{

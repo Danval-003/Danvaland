@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import './BingoPage.scss'
 
 const supabaseUrl = 'https://nchqsbeokgcngyizhfhe.supabase.co'
-const supabaseKey = process.env.VITE_REACT_APP_SUPABASE_KEY
+const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 const BingoPage = () => {

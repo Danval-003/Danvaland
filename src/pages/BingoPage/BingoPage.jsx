@@ -1,10 +1,12 @@
 import { React, useState, useEffect } from 'react'
-// import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 import './BingoPage.scss'
 
-/*const supabaseUrl = 'https://nchqsbeokgcngyizhfhe.supabase.co'
-const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+const supabaseUrl = 'https://nchqsbeokgcngyizhfhe.supabase.co'
+const supabase = createClient(
+  supabaseUrl,
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jaHFzYmVva2djbmd5aXpoZmhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDI0MTI1NTYsImV4cCI6MjAxNzk4ODU1Nn0.klSKxsTNefjDXG_ybCv4f7l-OFT2yDMQUqTPs0PUaA4',
+)
 
 const BingoPage = () => {
   const [realtime, setRealtime] = useState(null)
@@ -77,12 +79,6 @@ const BingoPage = () => {
       </div>
     </div>
   )
-}*/
-
-const BingoPage = () => (
-  <div>
-    <h1>Hola</h1>
-  </div>
-)
+}
 
 export default BingoPage

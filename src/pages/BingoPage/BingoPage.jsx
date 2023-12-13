@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+// import { createClient } from '@supabase/supabase-js'
 import './BingoPage.scss'
 
-const supabaseUrl = 'https://nchqsbeokgcngyizhfhe.supabase.co'
+/*const supabaseUrl = 'https://nchqsbeokgcngyizhfhe.supabase.co'
 const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
@@ -77,6 +77,12 @@ const BingoPage = () => {
       </div>
     </div>
   )
-}
+}*/
+
+const BingoPage = () => (
+  <div>
+    <h1>Hola</h1>
+  </div>
+)
 
 export default BingoPage

@@ -4,7 +4,7 @@ import { StartPage } from '@pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
-  console.log(process.env.SUPABASE_KEY)
+  console.log(import.meta.env.REACT_APP_SUPABASE_KEY)
   return (
     <BrowserRouter>
       <Routes>

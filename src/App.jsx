@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { StartPage, BingoPage } from '@pages'
+import { StartPage, BingoPage, BingoGamePage } from '@pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => (
@@ -8,6 +8,7 @@ const App = () => (
     <Routes>
       <Route path='/' element={<StartPage />} />
       <Route path='/Bingo' element={<BingoPage />} />
+      <Route path='/Bingo/Game/:hash' element={<BingoGamePage />} />
     </Routes>
   </BrowserRouter>
 )

@@ -8,6 +8,7 @@ import Starwars from './StarWars.png'
 import ALFAbetizate from './ALFAbetizate.png'
 import maze from './maze.png'
 import github from './github.png'
+import BingoArrow from './FlechaBingo.svg'
 
 export {
   cloudI,
@@ -20,4 +21,5 @@ export {
   ALFAbetizate,
   maze,
   github,
+  BingoArrow,
 }

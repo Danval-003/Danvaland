@@ -1,12 +1,7 @@
 import { React, useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
 import './BingoPage.scss'
-
-const supabaseUrl = 'https://nchqsbeokgcngyizhfhe.supabase.co'
-const supabase = createClient(
-  supabaseUrl,
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jaHFzYmVva2djbmd5aXpoZmhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDI0MTI1NTYsImV4cCI6MjAxNzk4ODU1Nn0.klSKxsTNefjDXG_ybCv4f7l-OFT2yDMQUqTPs0PUaA4',
-)
+import { BingoArrow } from '@assets'
+import supabase from '@services'
 
 const BingoPage = () => {
   const [realtime, setRealtime] = useState(null)
@@ -65,13 +60,18 @@ const BingoPage = () => {
     <div className='initialPage'>
       <div className='initialPage__container'>
         <div className='initialPage__container__title'>
-          <h1>Bingo's party</h1>
+          {['B', 'I', 'N', 'G', 'O'].map(letter => (
+            <div key={letter} className='initialPage__container__title_letter'>
+              <p>{letter}</p>
+            </div>
+          ))}
         </div>
         <div className='initialPage__container__flex__cards'>
           <div className='initialPage__container__cards'>
             {games.map(game => (
               <div key={game.id} className='card'>
                 <p>{game.Name}</p>
+                <img src={BingoArrow} alt='Arrow Bingo' />
               </div>
             ))}
           </div>

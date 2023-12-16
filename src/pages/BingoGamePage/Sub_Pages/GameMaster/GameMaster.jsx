@@ -28,25 +28,29 @@ const GameMaster = ({ id }) => {
       if (error) {
         throw error
       }
-      console.log(data[0].NumbersPlayed)
-      console.log(bingoBalls)
       const importantData = data[0].NumbersPlayed
+      console.log('op', importantData)
       setChosenNumbers(importantData)
       setNumbers(
         bingoBalls.filter(elementB => !importantData.includes(elementB)),
+      )
+      setRanNum(
+        importantData.length !== 0
+          ? importantData[importantData.length - 1]
+          : 0,
       )
     } catch (error) {
       console.error('Error al obtener datos de Supabase:', error.message)
     }
   }
 
-  const setNumbersB = async () => {
+  const setNumbersB = async temNumbers => {
     console.log(1)
     try {
       const { error } = await supabase
         .from('BingoPlays')
         .update({
-          NumbersPlayed: chosenNumbers,
+          NumbersPlayed: temNumbers,
         })
         .eq('id', id)
         .select()
@@ -58,6 +62,35 @@ const GameMaster = ({ id }) => {
     }
   }
 
+  const handle = payload => {
+    console.log(payload)
+    if (payload.eventType === 'UPDATE') {
+      getNumbers()
+    }
+  }
+
+  useEffect(() => {
+    const channelA = supabase
+      .channel('schema-db-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'BingoPlays',
+        },
+        payload => handle(payload),
+      )
+      .subscribe()
+    setRealtime(channelA)
+
+    return () => {
+      if (realtime) {
+        realtime.unsubscribe()
+      }
+    }
+  }, [])
+
   useEffect(() => {
     getNumbers()
   }, [])
@@ -66,20 +99,13 @@ const GameMaster = ({ id }) => {
     console.log('Numbers', numbers)
   }, [numbers])
 
-  useEffect(() => {
-    console.log(0)
-    if (chosenNumbers.length !== 0) {
-      setNumbersB()
-    }
-  }, [chosenNumbers])
-
   const randomElement = () => {
     const randomNumber = Math.floor(Math.random() * numbers.length)
     const temNumbers = numbers
     const randomEl = temNumbers.splice(randomNumber, 1)[0]
     setRanNum(randomEl)
-    setNumbers(temNumbers)
-    setChosenNumbers(prev => [...prev, randomEl])
+    const toSend = [...chosenNumbers, randomEl]
+    setNumbersB(toSend)
   }
 
   const startAnimation = () => {

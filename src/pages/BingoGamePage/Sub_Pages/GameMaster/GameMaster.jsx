@@ -3,7 +3,7 @@ import { BingoWheel } from '@components'
 import supabase from '@services'
 
 import './GameMaster.scss'
-import Proptypes, { element } from 'prop-types'
+import Proptypes from 'prop-types'
 
 const GameMaster = ({ id }) => {
   const [bingoBalls] = useState(() => {
@@ -13,12 +13,11 @@ const GameMaster = ({ id }) => {
     }
     return bBalls
   })
-  const [count, setCount] = useState(0)
   const [realtime, setRealtime] = useState(null)
   const [numbers, setNumbers] = useState([])
   const [ranNum, setRanNum] = useState(0)
   const [chosenNumbers, setChosenNumbers] = useState([])
-  const [isAnimating, setIsAnimating] = useState(false)
+
   const getNumbers = async () => {
     try {
       const { data, error } = await supabase
@@ -109,8 +108,6 @@ const GameMaster = ({ id }) => {
   }
 
   const startAnimation = () => {
-    setIsAnimating(true)
-
     // Intervalo de tiempo para cambiar el número durante la animación
     const animationInterval = setInterval(() => {
       const randomNumber = Math.floor(Math.random() * numbers.length)
@@ -121,9 +118,15 @@ const GameMaster = ({ id }) => {
     // Detener la animación después de un tiempo (por ejemplo, 2 segundos)
     setTimeout(() => {
       clearInterval(animationInterval)
-      setIsAnimating(false)
       randomElement()
     }, 2000) // Ajusta el tiempo de duración total de la animación (en milisegundos)
+  }
+
+  const restartGame = () => {
+    setNumbers(bingoBalls)
+    setChosenNumbers([])
+    setRanNum(0)
+    setNumbersB([])
   }
 
   return (
@@ -135,13 +138,22 @@ const GameMaster = ({ id }) => {
         <div className={`bingo_ball ${ranNum === 0 ? 'exclude' : ''}`}>
           {ranNum}
         </div>
-        <button
-          onClick={() => startAnimation()}
-          type='button'
-          className='random_button'
-        >
-          Sacar una pelota
-        </button>
+        <div className='buttons_container'>
+          <button
+            onClick={() => startAnimation()}
+            type='button'
+            className='random_button'
+          >
+            Sacar una pelota
+          </button>
+          <button
+            onClick={() => restartGame()}
+            type='button'
+            className='restart_button'
+          >
+            Reiniciar Juego
+          </button>
+        </div>
       </div>
       <div className='game_info'>
         <div className='game_card'>

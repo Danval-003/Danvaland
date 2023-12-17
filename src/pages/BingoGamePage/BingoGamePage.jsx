@@ -45,7 +45,7 @@ const BingoGamePage = () => {
 
   return (
     <div className='total_container'>
-      {!selectionOption ? <ShowGame /> : <GameMaster id={hash} />}
+      {!selectionOption ? <ShowGame id={hash} /> : <GameMaster id={hash} />}
       <div className='selectioner_container'>
         <button
           onClick={() => setSelectionOption(true)}

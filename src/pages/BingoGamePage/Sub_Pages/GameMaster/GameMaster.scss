@@ -7,6 +7,14 @@ $extra2Color: #F6FDC3;
 $headerColorExtra: #d15967;
 $gameSize: 30vw;
 
+.buttons_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 @media screen and (min-width: 900px) {
     .principal_container_game{
         position: absolute;
@@ -46,6 +54,38 @@ $gameSize: 30vw;
         width: 28vw;
         
         margin-bottom: 2vh;
+    }
+
+    .restart_button{
+        font-family: 'Nunito', sans-serif;
+        margin-top: 1vh;
+        font-weight: 600;
+        font-size: 1vw;
+        background-color: $extraColor;
+        color: $backgroundColor;
+        cursor: pointer;
+    
+        
+        &:focus{
+            outline: none;
+            border: none;
+        }
+    
+        &::selection{
+            outline: none;
+            border: none;
+        }
+    
+        &:hover{
+            background-color: $extraColor;
+            color: $backgroundColor;
+            filter: brightness(1.1);
+            outline: none;
+            border: none;
+        }
+    
+        
+        border: none;
     }
 
     .random_button{
@@ -218,11 +258,43 @@ $gameSize: 30vw;
         margin-bottom: 2vh;
     }
 
+    .restart_button{
+        font-family: 'Nunito', sans-serif;
+        margin-top: 1vh;
+        font-weight: 600;
+        font-size: 2vh;
+        background-color: $extraColor;
+        color: $backgroundColor;
+        cursor: pointer;
+    
+        
+        &:focus{
+            outline: none;
+            border: none;
+        }
+    
+        &::selection{
+            outline: none;
+            border: none;
+        }
+    
+        &:hover{
+            background-color: $extraColor;
+            color: $backgroundColor;
+            filter: brightness(1.1);
+            outline: none;
+            border: none;
+        }
+    
+        
+        border: none;
+    }
+
 
     .random_button{
         font-family: 'Nunito', sans-serif;
         font-weight: bold;
-        font-size: 4vw;
+        font-size: 3vh;
         background-color: $backgroundColor;
         color: $headerColor;
         cursor: pointer;

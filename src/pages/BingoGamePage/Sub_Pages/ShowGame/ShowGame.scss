@@ -1,0 +1,116 @@
+$headerColor: #F16767;
+$cardColor: #A459D1;
+$cardHoverColor: #b965ea;
+$backgroundColor: #F5EAEA;
+$extraColor: #FFB84C;
+$extra2Color: #F6FDC3;
+$headerColorExtra: #d15967;
+$gameSize: 50vw;
+
+@media screen and (min-width: 900px) {
+    .gamer_container{
+        position: absolute;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $backgroundColor;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game_table_global_container{
+        width: $gameSize;
+        background-color: $headerColorExtra;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .game_table_container{
+        position: relative;
+        width: 74%;
+        height: fit-content;
+        padding: 3%;
+        margin-left: 9%;
+        border-radius: 3vw;
+
+        & td{
+            background-color: $backgroundColor;
+            color:$headerColor;
+        }
+
+        & table {
+            font-family: 'Nunito', sans-serif;
+            width: 100%;
+            color: $cardColor;
+    
+            & td {
+                border: solid ;
+                border-radius: 1vw;
+                font-size: 1.2em;
+                width: 20%;
+                text-align: center; /* Centrar el texto horizontalmente */
+                vertical-align: middle; /* Centrar el contenido verticalmente */
+                & div {
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+                    transition: all 1s ease-in-out;
+                }
+                & .exclude{
+                    background-color: $headerColor;
+                    border-radius: 0% 40% / 30% 100%;
+                    color: $backgroundColor;
+                }
+              }
+
+            & thead {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+
+                & th p{
+                    border: 0.06em solid $headerColor;
+                    font-weight: 600;
+                    font-size: 2.9em;
+                    width: 100%;
+                    background-color: $backgroundColor;
+                    color: $headerColor;
+                    border-radius: 50%;
+                    aspect-ratio: 1/1;
+                    line-height: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    flex-direction: column;
+                    margin: 0;
+                }
+
+                & tr{
+                    align-items: center;
+                }
+            }
+
+            & th, td {
+                padding: 1.8%;
+                text-align: center; /* Centrar el texto horizontalmente */
+                vertical-align: middle; /* Centrar el contenido verticalmente */
+            }
+        }
+    }
+
+    .bingo_card_container{
+        background-color: $cardColor;
+        width: 100vw - $gameSize;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 899px) {
+
+}
+
